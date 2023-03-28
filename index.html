@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>DOM - Document Object Model</h1>
+    <p>Integrando o <span class="js">Javascript</span> com o <span class="ht">HTML</span></p>
+    <p>Gabriel Figueira</p>
+
+    <div id="mensagem" onclick="mudar()" onmouseenter="entrar()" onmouseout="sair()"> CLIQUE AQUI CLIQUE AQUI CLIQUE
+        AQUI CLIQUE AQUI CLIQUE AQUI CLIQUE AQUI CLIQUE AQUI CLIQUE AQUI CLIQUE AQUI</div>
+
+
+
+
+
+    <script>
+        var paragrafo = document.getElementsByTagName('p')[0];
+        window.document.write(paragrafo.innerHTML)
+        paragrafo.style.color = 'red'
+
+        var titulo = document.getElementsByTagName('h1')[0];
+        titulo.style.color = 'blue';
+
+        var corpo = document.body;
+        corpo.style.background = '#333'
+
+        var msg = document.getElementById('mensagem');
+        msg.style.color = 'blueviolet'
+
+        //EVENTOS
+
+        function mudar() {
+            msg.innerText = 'Agora que cliquei o texto mudou!'
+
+        }
+        
+        function entrar() {
+            msg.style.background = 'green'
+            msg.style.color = 'white'
+        }
+
+        function sair() {
+            msg.style.background = '#333'
+            msg.style.color = 'blueviolet'
+        }
+    </script>
+
+</body>
+
+</html>
